@@ -22,7 +22,7 @@ const server = http.createServer(app);
 // Set up socket.io
 const io = new Server(server, {
   cors: {
-    origin: "https://water-delivery-frontend-d02t.onrender.com",
+    origin: process.env.FRONTEND_URL,
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   },
@@ -39,7 +39,7 @@ app.use(express.json());
 
 // CORS setup
 app.use(cors({
-  origin: "https://water-delivery-frontend-d02t.onrender.com",
+  origin: "process.env.FRONTEND_URL",
   credentials: true,
 }));
 
