@@ -39,7 +39,7 @@ app.use(express.json());
 
 // CORS setup
 app.use(cors({
-  origin: process.env.FRONTEND_URL,
+  origin: "https://water-delivery-frontend-d02t.onrender.com",
   credentials: true,
 }));
 
