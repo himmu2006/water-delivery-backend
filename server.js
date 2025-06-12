@@ -22,7 +22,7 @@ const server = http.createServer(app);
 // Set up socket.io
 const io = new Server(server, {
   cors: {
-    origin: process.env.FRONTEND_URL,
+    origin: https://water-delivery-frontend-d02t.onrender.com,
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   },
